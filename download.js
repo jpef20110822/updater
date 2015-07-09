@@ -1,7 +1,7 @@
 // FileName: download.js
 
-var url = "https://github.com/tmiyoshi2015/updater/archive/alpha.zip";
-var file = "updater-alpha.zip"
+var url = "https://github.com/jpef20110822/updater/archive/master.zip";
+var file = "master.zip"
 
 var baseFolder = ".";
 var subFolder = file.replace(".zip","")
