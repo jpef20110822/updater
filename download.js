@@ -4,7 +4,7 @@ var url = "https://github.com/jpef20110822/updater/archive/master.zip";
 var file = "master.zip";
 
 var baseFolder = ".";
-var subFolder = file.replace(".zip","");
+var subFolder = "updater-master";
 
 var fso = new ActiveXObject("Scripting.FileSystemObject");
 var shell = new ActiveXObject('Shell.Application');
