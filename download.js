@@ -1,29 +1,29 @@
 // FileName: download.js
 
 var url = "https://github.com/jpef20110822/updater/archive/master.zip";
-var file = "master.zip"
+var file = "master.zip";
 
 var baseFolder = ".";
-var subFolder = file.replace(".zip","")
+var subFolder = file.replace(".zip","");
 
 var fso = new ActiveXObject("Scripting.FileSystemObject");
 var shell = new ActiveXObject('Shell.Application');
 
 // download file
 try {
-    var http = new ActiveXObject("Msxml2.ServerXMLHTTP")
-    http.open("GET", url, false)
-    http.send()
+    var http = new ActiveXObject("Msxml2.ServerXMLHTTP");
+    http.open("GET", url, false);
+    http.send();
     if (http.status == "200") {
-        var strm = WScript.CreateObject("Adodb.Stream")
-        var adTypeBinary = 1, adSaveCreateOverWrite = 2
-        strm.Type = adTypeBinary
-        strm.Open()
-        strm.Write(http.responseBody)
-        strm.Savetofile(baseFolder + "\\" + file, adSaveCreateOverWrite)
+        var strm = WScript.CreateObject("Adodb.Stream");
+        var adTypeBinary = 1, adSaveCreateOverWrite = 2;
+        strm.Type = adTypeBinary;
+        strm.Open();
+        strm.Write(http.responseBody);
+        strm.Savetofile(baseFolder + "\\" + file, adSaveCreateOverWrite);
     }
 } catch(e) {
-    throw e
+    throw e;
 }
 
 
